@@ -1,0 +1,9 @@
+<?php
+    $servidor="localhost";
+    $utilizador="root";
+    $senha="";
+    $bd="bd_forum";
+    $ligacao=mysqli_connect($servidor,$utilizador,$senha,$bd);
+    if($ligacao->connect_error)
+        die(mysqli_error($ligacao));
+?>
