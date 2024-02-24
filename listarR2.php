@@ -1,11 +1,13 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>FORUM</title>
+        <title>FORUM PROGRAMADORES</title>
         <meta http-equiv="refresh" content="2;url=login2.php">
     </head>
     <body>
         <?php
+        session_start();
+        include 'valida.php';
         include 'liga_bd.php';
         $sql ="insert into t_post (tema,titulo,texto,foto,id_user) values(
         '$_POST[tema]',

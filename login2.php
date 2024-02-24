@@ -25,6 +25,7 @@
             <br><br>
             <h2>Área de Administração</h2>
             <input type="button" value="Gerir Utilizadores" onclick="window.open('gerir_U.php','_self')">
+            <input type="button" value="Pesquisar Utilizadores" onclick="window.open('pesquisar_U.php','_self')">
             <input type="button" value="Gerir Posts" onclick="window.open('gerir_P.php','_self')">
             <input type="button" value="Gerir Respostas" onclick="window.open('gerir_R.php','_self')">
         <?php
