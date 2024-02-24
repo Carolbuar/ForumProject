@@ -28,14 +28,14 @@
             echo "</font>";
             if ($linha['apagado']==0){
             ?>
-            <form action="eliminarP.php" method="post">
+            <form action="eliminar_P.php" method="post">
                 <input type="hidden" value="<?php echo $linha['id_post']?>" name="id_post">
                 <input type="submit" value="Eliminar Post">
             </form>
             <?php
             }  if ($linha['apagado']==1){
             ?>
-            <form action="recuperarP.php" method="post">
+            <form action="recuperar_P.php" method="post">
                 <input type="hidden" value="<?php echo $linha['id_post']?>" name="id_post">
                 <input type="submit" value="Recuperar Post">
             </form>
