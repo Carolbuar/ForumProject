@@ -11,14 +11,13 @@
         if (session_status() !== PHP_SESSION_ACTIVE){
             $sql="SELECT * FROM t_user where nick='$_POST[nick]'";
             //pesquisa apenas o registo com o nick enviado
-            $resultado=mysqli_query($ligacao,$sql);
-            //vou ao array resultado e obtenho a prieira linha
+            $resultado=mysqli_query($ligacao,$sql) or die (mysqli_error($ligacao));
             $linha=mysqli_fetch_assoc($resultado);
             //caso nao exista a variavel linha
             if ($linha==NULL)
                 header('Location:erro.html');
             //caso o nickname exista tenho de verificar se as senhas sao iguais
-            if(strcmp($linha['pass'],$_POST['pass'])==0){
+            if(password_verify($_POST['pass'], $linha['pass'])){
                 session_start();
                 $_SESSION['id_user']=$linha['id_user'];
                 $_SESSION['nick']=$linha['nick'];

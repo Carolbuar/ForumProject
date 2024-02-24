@@ -9,9 +9,10 @@
         <h1>Registar Utilizadores</h1>
         <?php
         include 'liga_bd.php';
+        $tmp=password_hash($_POST['pass'], PASSWORD_DEFAULT);
         $sql ="INSERT INTO t_user (nick, nome, email, data_nasc, pass, foto) VALUES
-            ('$_POST[nick]','$_POST[nome]', '$_POST[email]', '$_POST[data_nasc]', '$_POST[pass]', '$_POST[foto]')";
-        
+            ('$_POST[nick]','$_POST[nome]', '$_POST[email]', '$_POST[data_nasc]', '".$tmp."', '$_POST[foto]')";
+        echo $sql;
         // caso consiga executar a ação mostra a mensagem de sucesso
         if (mysqli_query($ligacao, $sql))
             echo "<h3>Registo efetuado com sucesso!</h3>"; 
