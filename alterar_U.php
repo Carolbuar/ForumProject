@@ -1,10 +1,14 @@
-<html>
+<html lang="pt">
     <head>
         <meta charset="utf-8">
-        <title>Gestão de utilizadores</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link rel="shortcut icon" href="static/images/forum.ico" type="image/x-icon">
+        <title>Forum Programadores</title>
     </head>
     <body>
         <h1>Alterar Utilizadores</h1>
+        <hr>
+        <br>
         <?php
         session_start();
         include 'valida.php'; 
@@ -15,8 +19,6 @@
         //enquanto conseguir ler dados do array resultado imprime
         $linha = mysqli_fetch_assoc($resultado);
         ?>
-        <!-- o metodo post envia os dados de uma página para a outra de forma escondida
-            o metodo get envia os dados para a página seguinte pela barra de endereço-->
         <form action="alterar_U2.php" method="post">
             <p>Id:<input type="text" name="id_user" size="11" readonly value="<?php echo $linha['id_user'];?>"></p>
             <p>Nick:<input type="text" name="nick" size="20" value="<?php echo $linha['nick'];?>"></p>

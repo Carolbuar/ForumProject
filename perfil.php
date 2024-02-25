@@ -1,22 +1,20 @@
-<html>
+<html lang="pt">
     <head>
         <meta charset="utf-8">
-        <title>FORUM PROGRAMDORES</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link rel="shortcut icon" href="static/images/forum.ico" type="image/x-icon">
+        <title>Forum Programadores</title>
     </head>
     <body>
         <?php
         session_start();
         include 'valida.php';
         include 'liga_bd.php';
-        //crio a instrucao sql ir buscar o user selecionado
         $sql ="SELECT * FROM t_user WHERE id_user=".$_SESSION['id_user'];
         // a variavel resultado vai guardar todos os dados de todos os clientes
         $resultado =mysqli_query($ligacao, $sql) or die(mysqli_error($ligacao)); 
-        //enquanto conseguir ler dados do array resultado imprime
         $linha = mysqli_fetch_assoc($resultado);
         ?>
-        <!-- o metodo post envia os dados de uma página para a outra de forma escondida
-            o metodo get envia os dados para a página seguinte pela barra de endereço-->
         <form action="perfil2.php" method="post" name="novo_perfil">
             <p>Id:<input type="text" name="id_user" size="11" readonly value="<?php echo $linha['id_user'];?>"></p>
             <p>Nick:<input type="text" name="nick" size="20" required maxlength="20" readonly value="<?php echo $linha['nick'];?>"></p>

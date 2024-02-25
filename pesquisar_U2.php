@@ -1,21 +1,25 @@
-<html>
+<html lang="pt">
     <head>
         <meta charset="utf-8">
-        <title>Gestão de  Utilizadores</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link rel="shortcut icon" href="static/images/forum.ico" type="image/x-icon">
+        <title>Forum Programadores</title>
     </head>
     <body>
         <h1>Resultado da Pesquisa de Utilizadores</h1>
+        <hr>
+        <br>
         <?php
         session_start();
         include 'valida.php';
         include 'liga_bd.php';
         $sql = "SELECT * FROM t_user WHERE " . $_POST['tema'] . " LIKE '%" . $_POST['valor'] . "%'";
-        // o primeiro parametro é a base dados e o segundo a instrução sql
+        
         $resultado =mysqli_query($ligacao, $sql) or die(mysqli_error($ligacao)); 
 
         $num_reg=0;
         $num_bloq=0;
-        //enquanto conseguir ler dados do array resultado imprime
+        
         while($linha = mysqli_fetch_assoc($resultado)){
             //para colocar cor no fundo
             if($linha['apagado']==1)
@@ -57,7 +61,7 @@
         echo "<br>Numero total de utilizadores -> " . $num_reg . "</br>";
         echo "<br/>";
         echo "<br>Numero de utilizadores bloqueados -> " . $num_bloq . "</br>";
-        //fecho a instrução de escrita em php
+        
         ?>
         <br/>
         <a href="login2.php " target="_self">Volta ao Menu</a>

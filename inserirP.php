@@ -1,7 +1,9 @@
-<html>
+<html lang="pt">
     <head>
         <meta charset="utf-8">
-        <title>FORUM PROGRAMADORES</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link rel="shortcut icon" href="static/images/forum.ico" type="image/x-icon">
+        <title>Forum Programadores</title>
     </head>
     <body>
         <?php 
@@ -12,7 +14,8 @@
         $resultado =mysqli_query($ligacao, $sql) or die (mysqli_error($ligacao));
         ?>
         <h1>Inserir Posts</h1>
-        
+        <hr>
+        <br>
         <form action="inserirP2.php" method="post">
 
             Id user: <input type="text" name="id_user" size="20" maxlength="20" readonly value="<?php echo $_SESSION['id_user']?>"><br><br>

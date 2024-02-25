@@ -1,11 +1,15 @@
-<html>
+<html lang="pt">
     <head>
         <meta charset="utf-8">
-        <title>Gestão de Utilizadores</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link rel="shortcut icon" href="static/images/forum.ico" type="image/x-icon">
+        <title>Forum Programadores</title>
         <meta http-equiv="refresh" content="3;url=gerir_U.php">
     </head>
     <body>
         <h1>Alterar Utilizadores</h1>
+        <hr>
+        <br>
         <?php
         session_start();
         include 'valida.php'; 
