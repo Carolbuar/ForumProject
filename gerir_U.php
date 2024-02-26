@@ -4,9 +4,10 @@
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
         <link rel="shortcut icon" href="static/images/forum.ico" type="image/x-icon">
         <title>Forum Programadores</title>
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <h1>Gerir Utilizadores</h1>
+        <h1>GERIR UTILIZADORES</h1>
         <hr>
         <br>
         <?php

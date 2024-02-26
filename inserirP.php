@@ -4,8 +4,12 @@
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
         <link rel="shortcut icon" href="static/images/forum.ico" type="image/x-icon">
         <title>Forum Programadores</title>
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
+        <h1>INSERIR POSTS</h1>
+        <hr>
+        <br>
         <?php 
         session_start();
         include 'valida.php'; 
@@ -13,9 +17,7 @@
         $sql ="SELECT * FROM t_tema";
         $resultado =mysqli_query($ligacao, $sql) or die (mysqli_error($ligacao));
         ?>
-        <h1>Inserir Posts</h1>
-        <hr>
-        <br>
+        
         <form action="inserirP2.php" method="post">
 
             Id user: <input type="text" name="id_user" size="20" maxlength="20" readonly value="<?php echo $_SESSION['id_user']?>"><br><br>

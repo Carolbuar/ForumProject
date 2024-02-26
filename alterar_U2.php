@@ -4,10 +4,11 @@
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
         <link rel="shortcut icon" href="static/images/forum.ico" type="image/x-icon">
         <title>Forum Programadores</title>
+        <link rel="stylesheet" href="style.css">
         <meta http-equiv="refresh" content="3;url=gerir_U.php">
     </head>
     <body>
-        <h1>Alterar Utilizadores</h1>
+        <h1>ALTERAR UTILIZADOR</h1>
         <hr>
         <br>
         <?php

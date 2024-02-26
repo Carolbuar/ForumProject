@@ -2,7 +2,7 @@
     $tema="SELECT distinct (tema) FROM t_post WHERE apagado=0 ORDER BY tema";
     $tema_resultado = mysqli_query($ligacao, $tema) or die (mysqli_error($ligacao));
 
-    echo "<h1>Listagem de Posts - ".$_GET['tema']."</h1>";
+    echo "<h1>LISTAGEM DE POSTS</h1>";
     echo "<form action='listarP.php' method='get' align='left'>";
     echo "<select name='tema' align='right'>";
     echo "<option value= 'Todos'>Todos</option>";
